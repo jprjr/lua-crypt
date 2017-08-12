@@ -1,3 +1,4 @@
+#!/usr/bin/env lua
 local crypt = require'crypt'
 
 print('Select encryption method:')
