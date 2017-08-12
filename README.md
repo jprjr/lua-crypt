@@ -41,5 +41,20 @@ print(crypt.encrypt('sha512',password,'aaaaaaaa'))
 
 MIT - see file `LICENSE`
 
-Encryption methods are from the musl C library (also MIT-licensed),
+Some encryption functions are from the musl C library (also MIT-licensed),
 see: https://git.musl-libc.org/cgit/musl/tree/src/crypt
+
+From musl:
+  * src/crypt_md5.c
+  * src/crypt_sha256.c
+  * src/crypt_sha512.c
+
+The base64 functions are from https://github.com/joedf/base64.c (also MIT-licensed).
+
+From https://github.com/joedf/base64.c:
+  * src/base64.c
+  * src/base64.h
+
+The sha1 functions (sha1.c, sha1.h) are from https://tools.ietf.org/html/rfc3174
+
+
