@@ -54,6 +54,7 @@ methods['sha-256'] = methods['sha256']
 methods['sha-512'] = methods['sha512']
 
 local M = {}
+M.methods = methods
 
 local function split_hash(hash)
   if sub(hash,1,1) == '$' then
