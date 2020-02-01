@@ -26,6 +26,9 @@ int luacrypt(const char *key,const char *salt,char *output) {
     if(salt[1] == 'a' && salt[5] == '$') {
         return luamd5crypt(key,salt,output);
     }
+    if(salt[1] == '2') {
+        return luablowfish(key,salt,output);
+    }
     if(salt[1] == '5' && salt[2] == '$') {
         return luasha256crypt(key,salt,output);
     }

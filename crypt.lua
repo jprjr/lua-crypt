@@ -23,6 +23,11 @@ local methods = {
     min_salt = 8,
     max_salt = 8,
   },
+  ['blowfish'] = {
+    prefix = '$2y$',
+    min_salt = 25,
+    max_salt = 25,
+  },
   ['sha256'] = {
     prefix = '$5$',
     min_salt = 8,
@@ -58,8 +63,13 @@ M.methods = methods
 
 local function split_hash(hash)
   if sub(hash,1,1) == '$' then
-    local index = find(hash,'%$[^%$]*$')
-    return sub(hash,1,index), sub(hash,index+1)
+    if sub(hash,2,2) == '2' then
+      local index = find(hash,'%$[^%$]*$')
+      return sub(hash,1,index + 22), sub(hash,index+1 + 22)
+    else
+      local index = find(hash,'%$[^%$]*$')
+      return sub(hash,1,index), sub(hash,index+1)
+    end
   elseif sub(hash,1,1) == '{' then
     if sub(hash,5,5) == '}' then
       return '{SHA}', ''

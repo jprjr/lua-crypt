@@ -14,7 +14,7 @@ SO_SFX = so
 
 all: crypt/core.a crypt/core.$(SO_SFX)
 
-OBJS = src/crypt.o src/crypt_md5.o src/crypt_sha256.o src/crypt_sha512.o src/sha1.o src/luasha.o src/luassha.o src/base64.o
+OBJS = src/crypt.o src/crypt_blowfish.o src/crypt_md5.o src/crypt_sha256.o src/crypt_sha512.o src/sha1.o src/luasha.o src/luassha.o src/base64.o
 
 crypt/core.a: $(OBJS)
 	mkdir -p crypt

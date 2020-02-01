@@ -14,6 +14,7 @@ Object has the following methods:
   * Encrypts `key` with given `method` and `salt`
   * `method` is one of:
     * `md5`
+    * `blowfish`
     * `apr1`
     * `sha`
     * `ssha`
@@ -46,6 +47,7 @@ see: https://git.musl-libc.org/cgit/musl/tree/src/crypt
 
 From musl:
   * src/crypt_md5.c
+  * src/crypt_blowfish.c
   * src/crypt_sha256.c
   * src/crypt_sha512.c
 

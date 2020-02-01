@@ -2,6 +2,7 @@
 #define _LUA_CRYPT_H
 
 int luamd5crypt(const char *key, const char *setting, char *output);
+int luablowfish(const char *key, const char *setting, char *output);
 int luasha256crypt(const char *key, const char *setting, char *output);
 int luasha512crypt(const char *key, const char *setting, char *output);
 int luasha(const char *key, char *output);
