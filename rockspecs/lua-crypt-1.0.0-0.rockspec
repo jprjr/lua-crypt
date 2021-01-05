@@ -25,6 +25,7 @@ build = {
             sources = {
               'src/base64.c',
               'src/crypt.c',
+              'src/crypt_blowfish.c',
               'src/crypt_md5.c',
               'src/crypt_sha256.c',
               'src/crypt_sha512.c',
