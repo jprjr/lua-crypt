@@ -1,9 +1,9 @@
 package = "lua-crypt"
-version = "1.0.0-0"
+version = "1.0.1-0"
 
 source = {
-    url = "https://github.com/jprjr/lua-crypt/archive/1.0.0.tar.gz",
-    file= "lua-crypt-1.0.0.tar.gz"
+    url = "https://github.com/jprjr/lua-crypt/archive/1.0.1.tar.gz",
+    file= "lua-crypt-1.0.1.tar.gz"
 }
 
 description = {
